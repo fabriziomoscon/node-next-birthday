@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/fabriziomoscon/node-next-birthday.svg)](https://travis-ci.org/fabriziomoscon/node-next-birthday)
+
+
 # node-next-birthday
 Returns the next birthday of the birthday passed.
 
