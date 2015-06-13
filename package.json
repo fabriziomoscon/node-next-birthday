@@ -1,0 +1,32 @@
+{
+  "name": "next-birthday",
+  "version": "1.0.0",
+  "description": "Returns the next birthday for the one passed",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabriziomoscon/node-next-birthday.git"
+  },
+  "keywords": [
+    "birthday",
+    "next",
+    "birthday",
+    "birthdate",
+    "birth",
+    "date"
+  ],
+  "author": "Fabrizio Moscon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabriziomoscon/node-next-birthday/issues"
+  },
+  "homepage": "https://github.com/fabriziomoscon/node-next-birthday#readme",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "mocha": "^2.2.5",
+    "should": "^6.0.3"
+  }
+}
