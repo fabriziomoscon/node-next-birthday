@@ -1,4 +1,10 @@
-module.exports = function (birthday, today) {
+var leapYear = require('leap-year')
+
+module.exports = {
+  get: getNextBirthday
+}
+
+function getNextBirthday(birthday, today) {
 
   if (typeof today === 'undefined' || today === null) {
     today = new Date()
@@ -13,13 +19,27 @@ module.exports = function (birthday, today) {
   }
 
   var thisYearBirtday = new Date(birthday)
+  var thisYear = today.getFullYear()
 
-  thisYearBirtday.setYear(new Date().getFullYear())
+  thisYearBirtday.setYear(thisYear)
+
+  if (_isFeb29(birthday) && !leapYear(thisYear)) {
+    thisYearBirtday.setMonth(1)
+    thisYearBirtday.setDate(28)
+    return thisYearBirtday
+  }
 
   if (thisYearBirtday <= today) {
-    thisYearBirtday.setYear(new Date().getFullYear()+1)
+    thisYearBirtday.setYear(today.getFullYear()+1)
   }
 
   return thisYearBirtday
 
+}
+
+function _isFeb29 (date) {
+  if (date.getMonth() === 1 && date.getDay() !== 29) {
+    return true
+  }
+  return false
 }
